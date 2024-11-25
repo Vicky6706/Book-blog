@@ -1,0 +1,130 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+
+header {
+    background: #e4a93c;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 4px solid #333;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    padding: 2rem;
+    flex: 1;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;  /* Ensures some space between cards and the footer */
+}
+
+.book-card {
+    background: #ffffff; /* Base background */
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative; /* Keeps cards in their original position within the layout */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.book-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.book-card h3 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+.book-card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.book-card a:hover {
+    color: #4CAF50;
+}
+
+.book-card.fixed-position {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: #f4f4f4; /* Color change for the fixed card */
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #b1e791;
+    color: white;
+    margin-top: auto;
+    width: 100%;
+}
+
+
+.bottom-right-image {
+    position: absolute;
+    bottom: 80px; 
+    right: 20px;  
+    width: 300px; 
+    height: auto;
+    z-index: 10; 
+}
+
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: none; 
+    cursor: pointer;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #45a049;
+}

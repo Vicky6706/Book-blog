@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>My Book Blog</title>
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 My Book Blog</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('create_post') }}">Add a Book Review</a>
+        </nav>
+    </header>
+    <main class="container">
+        <img src="{{ url_for('static', filename='images/girlbook.jpg') }}" 
+        alt="Girl reads a book" class="bottom-right-image">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 My Book Blog. All rights reserved.</p>
+    </footer>
+
+    <button id="scroll-to-top" class="scroll-to-top-btn" onclick="scrollToTop()">↑</button>
+
+</body>
+</html>

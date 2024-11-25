@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add a Book Review</h2>
+<form method="POST">
+    <label for="title">Book Title/Author</label>
+    <input type="text" id="title" name="title" placeholder="Enter the book title/Author" required>
+    
+    <label for="content">Your Review</label>
+    <textarea id="content" name="content" rows="5" placeholder="Write your thoughts about the book" required></textarea>
+    
+    <button type="submit">Submit Review</button>
+</form>
+{% endblock %}
