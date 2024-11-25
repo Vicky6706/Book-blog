@@ -14,7 +14,7 @@ Installation
 1. Clone the repository
 bash
 Copy code
-git clone https://github.com/yourusername/my-book-blog.git
+git clone https://github.com/Vicky6706/Book-blog
 cd my-book-blog
 2. Create and activate a virtual environment (optional but recommended)
 bash
@@ -29,9 +29,7 @@ pip install -r requirements.txt
 2.	Create a new database in PostgreSQL, for example:
 sql
 CREATE DATABASE book_blog;
-3.	Update the SQLALCHEMY_DATABASE_URI in app.py with your PostgreSQL credentials:
-python
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://your_username:your_password@localhost:5432/book_blog'
+
 5. Initialize the Database
 Run the following command to create the necessary database tables:
 bash
@@ -70,3 +68,5 @@ If you'd like to contribute, please fork the repository and submit a pull reques
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+
+Render Deployed:   https://book-blog-4.onrender.com
